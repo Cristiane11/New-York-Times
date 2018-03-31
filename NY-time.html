@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>Document</title>
+    </head>
+
+    <div class="container">
+            <div class="jumbotron">
+                <h1>New York Times</h1>
+            </div>
+    <body>
+     <div class="MainContainer">
+            <div class="form-group row">
+                    <label for="example-text-input" class="col-2 col-form-label">Search Term</label>
+                    <div class="col-10">
+                      <input class="form-control" type="text" value="Technology" id="example-text-input">
+                    </div>
+                  </div>
+                  div class="form-group row">
+                    <label for="example-text-input" class="col-2 col-form-label">Search Form</label>
+                    <div class="col-10">
+                      <input class="form-control" type="text" value="Technology" id="example-text-input">
+                    </div>
+                  </div>
+                  div class="form-group row">
+                    <label for="example-text-input" class="col-2 col-form-label">Search Form</label>
+                    <div class="col-10">
+                      <input class="form-control" type="text" value="Technology" id="example-text-input">
+                    </div>
+                  </div>
+                  div class="form-group row">
+                    <label for="example-text-input" class="col-2 col-form-label">Search Form</label>
+                    <div class="col-10">
+                      <input class="form-control" type="text" value="Technology" id="example-text-input">
+                    </div>
+                  </div>
+
+     </div>
+<body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+        $("button").on("click", function() {
+            // In this case, the "this" keyword refers to the button that was clicked
+            var person = $(this).attr("data-person");
+        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=facebook&api-key=2200038b310646e4893540e13bb5c9c3"
+        // Performing our AJAX GET request
+      $.ajax({
+          url: queryURL,
+          method: "GET"
+        })
+        // After the data comes back from the API
+        .done(function(response) {
+          // Storing an array of results in the results variable
+          var results = response.data;
+       
+
+
+
+</body>
+</html>
